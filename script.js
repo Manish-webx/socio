@@ -154,7 +154,7 @@ function initRoiCalculator() {
 
     if (claimBtn) {
       const msg = encodeURIComponent(
-        `Hi Aman! I used the Socio Ninjas Growth Simulator for ${currentNicheTitle} with a monthly budget of ₹${currentBudget.toLocaleString('en-IN')}. Let's discuss our scaling blueprint!`
+        `Hi! I used the Socio Ninjas Growth Simulator for ${currentNicheTitle} with a monthly budget of ₹${currentBudget.toLocaleString('en-IN')}. Let's discuss our scaling blueprint!`
       );
       claimBtn.href = `https://wa.me/919354927966?text=${msg}`;
     }
@@ -222,18 +222,48 @@ function initContactForm() {
 function initMobileNav() {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const menu = document.querySelector('.nav-links-menu');
-  const links = document.querySelectorAll('.nav-item a');
+  const links = document.querySelectorAll('.nav-item a:not(.nav-link-dropdown-toggle)');
+  const dropdownToggle = document.querySelector('.nav-link-dropdown-toggle');
+  const dropdownParent = document.querySelector('.nav-item.has-dropdown');
 
   if (!toggle || !menu) return;
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+  function closeMenu() {
+    menu.classList.remove('active');
+    document.body.classList.remove('mobile-nav-open');
+    if (dropdownParent) dropdownParent.classList.remove('mobile-open');
+    const icon = toggle.querySelector('i');
+    if (icon) icon.className = 'fas fa-bars';
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = menu.classList.toggle('active');
+    document.body.classList.toggle('mobile-nav-open', isActive);
+    const icon = toggle.querySelector('i');
+    if (icon) {
+      icon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
+    }
   });
 
-  links.forEach((link) => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('active');
+  if (dropdownToggle && dropdownParent) {
+    dropdownToggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdownParent.classList.toggle('mobile-open');
+      }
     });
+  }
+
+  links.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      closeMenu();
+    }
   });
 }
 
