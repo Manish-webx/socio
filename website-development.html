@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High-Performance Website Development & Web Systems | Socio Ninjas</title>
+  <meta name="description" content="Sub-second load times, bespoke UI/UX, and high-conversion e-commerce/landing page architectures built with Next.js, Webflow, and Shopify Plus by Socio Ninjas.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain-overlay"></div>
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower-ring"></div>
+  <div class="cursor-tag"></div>
+
+  <!-- Navigation -->
+  <header class="agency-navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-identity">
+        <img src="logo.jpeg" alt="Socio Ninjas Logo">
+        <span class="brand-text-logo">SOCIO<span>NINJAS</span></span>
+      </a>
+
+      <ul class="nav-links-menu">
+        <li class="nav-item"><a href="index.html#services">All Services</a></li>
+        <li class="nav-item"><a href="index.html#calculator">ROI Simulator</a></li>
+        <li class="nav-item"><a href="index.html#methodology">Roadmap</a></li>
+        <li class="nav-item"><a href="index.html#work">Case Studies</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <a href="https://wa.me/919354927966?text=Hi%20Aman!%20I'm%20interested%20in%20Website%20Development%20with%20Socio%20Ninjas." target="_blank" class="btn-wa-header">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Aman</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Service Hero -->
+  <section class="hero-stage">
+    <div class="hero-backdrop-glow"></div>
+    <div class="hero-backdrop-glow-cyan"></div>
+
+    <div class="container">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>TACTICAL DISCIPLINE // 04</span>
+      </div>
+
+      <h1 class="hero-headline">
+        HIGH-PERFORMANCE <span class="text-gradient-red">WEBSITES & CONVERSION</span> ENGINES.
+      </h1>
+
+      <div class="hero-subtext-grid">
+        <div>
+          <p class="hero-lead-para">
+            Your website is your 24/7 digital closer. We build lightning-fast, ultra-aesthetic web systems using <strong>Next.js, Webflow, and Shopify Plus</strong> with sub-second load times and frictionless checkout flows engineered to double your conversion rate.
+          </p>
+        </div>
+
+        <div class="hero-actions-row">
+          <a href="#contact" class="btn-magnetic btn-primary-ninja">
+            <span>Book Website Teardown</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/919354927966?text=Hi%20Aman!%20Let's%20discuss%20a%20new%20website%20build." target="_blank" class="btn-magnetic btn-outline-ninja">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Strategy</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-ticker-metrics">
+        <div class="metric-node">
+          <div class="metric-node-val">99.4%</div>
+          <div class="metric-node-label">PageSpeed Score</div>
+        </div>
+        <div class="metric-node">
+          <div class="metric-node-val">&lt;1.1s</div>
+          <div class="metric-node-label">Avg Load Time</div>
+        </div>
+        <div class="metric-node">
+          <div class="metric-node-val">+220%</div>
+          <div class="metric-node-label">Avg Conversion Surge</div>
+        </div>
+        <div class="metric-node">
+          <div class="metric-node-val">100%</div>
+          <div class="metric-node-label">Custom Code & UX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Comparison Matrix -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="status-pill"><span>THE DIGITAL STOREFRONT</span></div>
+          <h2 class="section-head-title">WHY TRADITIONAL WEBSITES <span class="text-gradient-red">KILL SALES</span></h2>
+        </div>
+        <p class="section-head-desc">
+          Bloated templates and slow load times burn 50%+ of your paid traffic before users even read your headline.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comparison-card card-negative">
+          <div class="comparison-header">
+            <div class="comparison-icon"><i class="fas fa-times-circle"></i></div>
+            <div class="comparison-title">The Bloated Template Approach</div>
+          </div>
+          <ul class="comparison-list">
+            <li class="comparison-item">
+              <i class="fas fa-times"></i>
+              <span><strong>Slow 4+ Second Load Times:</strong> Heavy, unoptimized WordPress themes with 40+ plugins causing massive traffic drop-off.</span>
+            </li>
+            <li class="comparison-item">
+              <i class="fas fa-times"></i>
+              <span><strong>Zero Conversion Hierarchy:</strong> Cluttered layouts with confusing calls-to-action that leave visitors disoriented.</span>
+            </li>
+            <li class="comparison-item">
+              <i class="fas fa-times"></i>
+              <span><strong>Broken Mobile Experience:</strong> Glitchy mobile rendering, awkward checkout steps, and unresponsive buttons.</span>
+            </li>
+            <li class="comparison-item">
+              <i class="fas fa-times"></i>
+              <span><strong>Missing Tracking & Event Schemas:</strong> Incomplete analytics pixels that leave you blind to where users drop off.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="comparison-card card-positive">
+          <div class="comparison-header">
+            <div class="comparison-icon"><i class="fas fa-bolt"></i></div>
+            <div class="comparison-title">The Socio Ninjas Conversion Engine</div>
+          </div>
+          <ul class="comparison-list">
+            <li class="comparison-item">
+              <i class="fas fa-check"></i>
+              <span><strong>Sub-Second Jamstack Architecture:</strong> Ultra-clean Next.js / Webflow builds scoring 99+ on Google Core Web Vitals.</span>
+            </li>
+            <li class="comparison-item">
+              <i class="fas fa-check"></i>
+              <span><strong>Frictionless CRO Wireframes:</strong> Psychological visual hierarchy designed to guide every visitor directly toward checkout.</span>
+            </li>
+            <li class="comparison-item">
+              <i class="fas fa-check"></i>
+              <span><strong>Mobile-First Luxury Aesthetics:</strong> Flawless micro-interactions, smooth scroll physics, and instant-load mobile funnels.</span>
+            </li>
+            <li class="comparison-item">
+              <i class="fas fa-check"></i>
+              <span><strong>Deep CAPI & Analytics Integrations:</strong> Pre-wired with Meta CAPI, Google Tag Manager, GA4, and webhook pipelines.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: 6 Deep Tactical Modules -->
+  <section class="section-padding" style="background: rgba(255, 255, 255, 0.01);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="status-pill"><span>FULL-STACK ARSENAL</span></div>
+          <h2 class="section-head-title">6 PILLARS OF OUR <span class="text-gradient-red">WEB SYSTEMS</span></h2>
+        </div>
+        <p class="section-head-desc">
+          Custom digital architecture engineered for brand authority, blazing speed, and maximum conversions.
+        </p>
+      </div>
+
+      <div class="deep-deliverables-grid">
+        <!-- Module 01 -->
+        <div class="deliverable-deep-card">
+          <div>
+            <div class="deliverable-top-meta">
+              <span class="deliverable-module-tag">MODULE 01 //</span>
+              <div class="deliverable-card-icon"><i class="fas fa-bezier-curve"></i></div>
+            </div>
+            <h3 class="deliverable-card-title">Bespoke UI/UX & Figma Prototyping</h3>
+            <p class="deliverable-card-desc">
+              Every build starts with custom wireframing and high-fidelity Figma designs tailored to your brand identity, ensuring a striking first impression.
+            </p>
+          </div>
+          <ul class="deliverable-points-list">
+            <li><i class="fas fa-check-circle"></i> High-Fidelity Interactive Figma Mockups</li>
+            <li><i class="fas fa-check-circle"></i> Custom Design Tokens & Typography</li>
+            <li><i class="fas fa-check-circle"></i> Mobile & Desktop Wireframe Reviews</li>
+          </ul>
+        </div>
+
+        <!-- Module 02 -->
+        <div class="deliverable-deep-card">
+          <div>
+            <div class="deliverable-top-meta">
+              <span class="deliverable-module-tag">MODULE 02 //</span>
+              <div class="deliverable-card-icon"><i class="fas fa-code"></i></div>
+            </div>
+            <h3 class="deliverable-card-title">Next.js & Modern Frontend Architecture</h3>
+            <p class="deliverable-card-desc">
+              Clean, modular, and blazing-fast code. We leverage Next.js, React, Tailwind CSS, and vanilla JS animations for smooth, stutter-free performance.
+            </p>
+          </div>
+          <ul class="deliverable-points-list">
+            <li><i class="fas fa-check-circle"></i> Server-Side Rendering (SSR) & Static Site</li>
+            <li><i class="fas fa-check-circle"></i> GSAP Micro-Interactions & Cursor Physics</li>
+            <li><i class="fas fa-check-circle"></i> 100% Responsive Adaptive Layouts</li>
+          </ul>
+        </div>
+
+        <!-- Module 03 -->
+        <div class="deliverable-deep-card">
+          <div>
+            <div class="deliverable-top-meta">
+              <span class="deliverable-module-tag">MODULE 03 //</span>
+              <div class="deliverable-card-icon"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+            <h3 class="deliverable-card-title">Shopify Plus & E-Commerce Weaponization</h3>
+            <p class="deliverable-card-desc">
+              Turn your online store into an automated cash machine. We engineer high-converting product detail pages, sticky buy buttons, 1-click upsells, and bundle builders.
+            </p>
+          </div>
+          <ul class="deliverable-points-list">
+            <li><i class="fas fa-check-circle"></i> Custom Liquid / Headless Shopify Themes</li>
+            <li><i class="fas fa-check-circle"></i> Post-Purchase 1-Click Upsell Funnels</li>
+            <li><i class="fas fa-check-circle"></i> Cart Drawer & Cross-Sell Workflows</li>
+          </ul>
+        </div>
+
+        <!-- Module 04 -->
+        <div class="deliverable-deep-card">
+          <div>
+            <div class="deliverable-top-meta">
+              <span class="deliverable-module-tag">MODULE 04 //</span>
+              <div class="deliverable-card-icon"><i class="fas fa-tachometer-alt"></i></div>
+            </div>
+            <h3 class="deliverable-card-title">Core Web Vitals & Speed Optimization</h3>
+            <p class="deliverable-card-desc">
+              We compress assets, inline critical CSS, optimize fonts, and deploy edge CDN caching to guarantee a 95+ score on Google PageSpeed Insights.
+            </p>
+          </div>
+          <ul class="deliverable-points-list">
+            <li><i class="fas fa-check-circle"></i> Sub-1.1 Second Largest Contentful Paint (LCP)</li>
+            <li><i class="fas fa-check-circle"></i> Zero Cumulative Layout Shift (CLS)</li>
+            <li><i class="fas fa-check-circle"></i> Cloudflare Edge Caching & Asset Minification</li>
+          </ul>
+        </div>
+
+        <!-- Module 05 -->
+        <div class="deliverable-deep-card">
+          <div>
+            <div class="deliverable-top-meta">
+              <span class="deliverable-module-tag">MODULE 05 //</span>
+              <div class="deliverable-card-icon"><i class="fas fa-mouse-pointer"></i></div>
+            </div>
+            <h3 class="deliverable-card-title">Conversion Rate Optimization (CRO)</h3>
+            <p class="deliverable-card-desc">
+              Every button, form, and testimonial is strategically placed based on eye-tracking research and conversion psychology to maximize sales inquiries.
+            </p>
+          </div>
+          <ul class="deliverable-points-list">
+            <li><i class="fas fa-check-circle"></i> High-Converting Multi-Step Lead Forms</li>
+            <li><i class="fas fa-check-circle"></i> Sticky Floating WhatsApp & CTA Bars</li>
+            <li><i class="fas fa-check-circle"></i> Social Proof & Trust Badge Architecture</li>
+          </ul>
+        </div>
+
+        <!-- Module 06 -->
+        <div class="deliverable-deep-card">
+          <div>
+            <div class="deliverable-top-meta">
+              <span class="deliverable-module-tag">MODULE 06 //</span>
+              <div class="deliverable-card-icon"><i class="fas fa-plug"></i></div>
+            </div>
+            <h3 class="deliverable-card-title">Webhook, Pixel & CRM Integrations</h3>
+            <p class="deliverable-card-desc">
+              Seamlessly connect your site to your marketing ecosystem: instant WhatsApp lead notifications, HubSpot CRM sync, Zapier triggers, and Meta CAPI.
+            </p>
+          </div>
+          <ul class="deliverable-points-list">
+            <li><i class="fas fa-check-circle"></i> Instant WhatsApp & Email Lead Alerts</li>
+            <li><i class="fas fa-check-circle"></i> Full Meta CAPI & Google Tag Manager Setup</li>
+            <li><i class="fas fa-check-circle"></i> Automated CRM & Zapier Data Pipelines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: 4-Stage Protocol -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="status-pill"><span>DEVELOPMENT SPRINT</span></div>
+          <h2 class="section-head-title">THE 4-STAGE <span class="text-gradient-red">BUILD PIPELINE</span></h2>
+        </div>
+        <p class="section-head-desc">
+          How we deliver custom, high-performance web systems on time with zero headaches.
+        </p>
+      </div>
+
+      <div class="roadmap-timeline-grid">
+        <div class="roadmap-card">
+          <span class="roadmap-phase-tag">STAGE 01 // DAYS 1–7</span>
+          <h3 class="roadmap-title">Strategy & UX Wireframes</h3>
+          <p style="font-size: 0.9rem; color: var(--c-text-muted);">
+            Audience persona analysis, conversion architecture mapping, user journey teardown, and establishing low-fidelity structural wireframes.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-phase-tag">STAGE 02 // DAYS 8–14</span>
+          <h3 class="roadmap-title">Figma UI & Aesthetic Polish</h3>
+          <p style="font-size: 0.9rem; color: var(--c-text-muted);">
+            Crafting the custom visual design system, typography, color hierarchy, and delivering interactive clickable prototypes for your approval.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-phase-tag">STAGE 03 // DAYS 15–24</span>
+          <h3 class="roadmap-title">Clean Code Development</h3>
+          <p style="font-size: 0.9rem; color: var(--c-text-muted);">
+            Building the frontend architecture, implementing micro-animations, integrating CMS endpoints, and configuring tracking pixels & server CAPI.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-phase-tag">STAGE 04 // DAYS 25–30</span>
+          <h3 class="roadmap-title">Speed QA & Live Deployment</h3>
+          <p style="font-size: 0.9rem; color: var(--c-text-muted);">
+            Rigorous cross-browser QA testing, Google Core Web Vitals optimization, SSL setup, domain DNS cutover, and 30-day hypercare support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Tech Stack -->
+  <section class="section-padding" style="background: rgba(255, 255, 255, 0.015);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="status-pill"><span>DEVELOPMENT STACK</span></div>
+          <h2 class="section-head-title">MODERN <span class="text-gradient-red">WEB ARSENAL</span></h2>
+        </div>
+        <p class="section-head-desc">
+          We use modern, scalable technologies that ensure maximum speed, security, and developer freedom.
+        </p>
+      </div>
+
+      <div class="tech-stack-grid">
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fab fa-react"></i></div>
+          <div>
+            <div class="tech-tool-name">Next.js & React</div>
+            <div class="tech-tool-role">Modern Headless Framework</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fab fa-shopify"></i></div>
+          <div>
+            <div class="tech-tool-name">Shopify Plus</div>
+            <div class="tech-tool-role">Scalable E-Commerce Engine</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fas fa-layer-group"></i></div>
+          <div>
+            <div class="tech-tool-name">Webflow Enterprise</div>
+            <div class="tech-tool-role">Visual CMS & Quick Iterations</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fab fa-figma"></i></div>
+          <div>
+            <div class="tech-tool-name">Figma Pro</div>
+            <div class="tech-tool-role">UI/UX & Design Systems</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fas fa-bolt"></i></div>
+          <div>
+            <div class="tech-tool-name">GSAP & Framer Motion</div>
+            <div class="tech-tool-role">Smooth Physics & Animations</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fas fa-cloud"></i></div>
+          <div>
+            <div class="tech-tool-name">Vercel & Cloudflare</div>
+            <div class="tech-tool-role">Global Edge CDN Hosting</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <div class="tech-tool-name">Microsoft Clarity / Hotjar</div>
+            <div class="tech-tool-role">Session Heatmap Analytics</div>
+          </div>
+        </div>
+
+        <div class="tech-tool-card">
+          <div class="tech-tool-icon"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <div class="tech-tool-name">SSL & Security Hardening</div>
+            <div class="tech-tool-role">DDoS & Enterprise Protection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Operational Guarantees & Deliverables SLA -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="status-pill"><span>OUR GUARANTEE</span></div>
+          <h2 class="section-head-title">THE SOCIO NINJAS <span class="text-gradient-red">DEVELOPMENT SLA</span></h2>
+        </div>
+        <p class="section-head-desc">
+          No endless delays. No spaghetti code. Just flawless execution delivered on time.
+        </p>
+      </div>
+
+      <div class="operational-grid">
+        <div class="operational-card">
+          <div class="operational-icon-wrap"><i class="fas fa-tachometer-alt"></i></div>
+          <h4 class="operational-title">90+ PageSpeed Score</h4>
+          <p class="operational-desc">We guarantee your website scores 90+ on Google Core Web Vitals for mobile and desktop upon launch.</p>
+        </div>
+
+        <div class="operational-card">
+          <div class="operational-icon-wrap"><i class="fas fa-code-branch"></i></div>
+          <h4 class="operational-title">100% Code Ownership</h4>
+          <p class="operational-desc">You own 100% of your source code, design files, domains, and hosting accounts with zero proprietary lock-in.</p>
+        </div>
+
+        <div class="operational-card">
+          <div class="operational-icon-wrap"><i class="fas fa-life-ring"></i></div>
+          <h4 class="operational-title">30-Day Post-Launch Hypercare</h4>
+          <p class="operational-desc">Dedicated bug fixes, performance monitoring, and team training for 30 days after public launch at zero extra cost.</p>
+        </div>
+
+        <div class="operational-card">
+          <div class="operational-icon-wrap"><i class="fas fa-comments"></i></div>
+          <h4 class="operational-title">Direct Dev War Room</h4>
+          <p class="operational-desc">Stay in direct contact with your lead developer and Aman Vaid on Slack or WhatsApp throughout the build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Tactical FAQ Accordion -->
+  <section class="section-padding" style="background: rgba(255, 255, 255, 0.01);">
+    <div class="container">
+      <div class="section-head" style="text-align: center; justify-content: center; flex-direction: column;">
+        <div class="status-pill" style="margin: 0 auto 12px;"><span>DEVELOPMENT FAQ</span></div>
+        <h2 class="section-head-title">FREQUENTLY ASKED <span class="text-gradient-red">QUESTIONS</span></h2>
+        <p class="section-head-desc" style="margin: 0 auto; text-align: center;">
+          Clear answers regarding timelines, CMS editing, hosting, and SEO continuity.
+        </p>
+      </div>
+
+      <div class="service-faq-container">
+        <div class="service-faq-item is-open">
+          <button class="faq-header-btn" type="button">
+            <span>How long does a complete custom website build take?</span>
+            <div class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-content-body">
+            A high-converting custom landing page or 5-page corporate website takes 2 to 3 weeks. A comprehensive enterprise site or full Shopify store build typically takes 3 to 4 weeks from initial wireframe sign-off to public launch.
+          </div>
+        </div>
+
+        <div class="service-faq-item">
+          <button class="faq-header-btn" type="button">
+            <span>Will our internal team be able to edit text and images easily?</span>
+            <div class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-content-body">
+            Yes! We integrate user-friendly visual CMS solutions (Webflow CMS, Shopify Admin, or Sanity/Strapi headless CMS) and record custom video Loom tutorials showing your team exactly how to update text, blogs, and images with zero coding knowledge.
+          </div>
+        </div>
+
+        <div class="service-faq-item">
+          <button class="faq-header-btn" type="button">
+            <span>Can you redesign our existing site without losing our Google SEO rankings?</span>
+            <div class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-content-body">
+            Absolutely. We perform a pre-migration SEO crawl, map every URL with 301 redirects, preserve existing meta tags and canonical structures, and improve Core Web Vitals to boost your rankings post-launch.
+          </div>
+        </div>
+
+        <div class="service-faq-item">
+          <button class="faq-header-btn" type="button">
+            <span>Do you handle web hosting, domain setup, and security?</span>
+            <div class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-content-body">
+            Yes, we deploy on enterprise edge networks like Vercel and Cloudflare with automated global CDN distribution, free SSL certificates, DDoS mitigation, and daily automated backups.
+          </div>
+        </div>
+
+        <div class="service-faq-item">
+          <button class="faq-header-btn" type="button">
+            <span>How does your custom development improve paid ad performance?</span>
+            <div class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-content-body">
+            When page load time drops from 4 seconds to under 1.2 seconds, bounce rates drop by over 50%. Combined with message-matched headlines, frictionless mobile forms, and server-side CAPI event tracking, our websites routinely double paid ad ROAS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Lead Capture Form -->
+  <section class="section-padding contact-section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="status-pill"><span>UPGRADE YOUR STOREFRONT</span></div>
+          <h2 class="section-head-title">CLAIM YOUR <span class="text-gradient-red">WEBSITE TEARDOWN</span></h2>
+        </div>
+        <p class="section-head-desc">
+          Get a detailed CRO & speed teardown of your current website with recommendations to improve conversion rates.
+        </p>
+      </div>
+
+      <div class="contact-layout-grid">
+        <div class="contact-bio-card">
+          <div class="contact-founder-header">
+            <img src="logo.jpeg" alt="Aman Vaid" class="founder-img">
+            <div class="founder-meta">
+              <h3>Aman Vaid</h3>
+              <p>// WEB ARCHITECT & LEAD STRATEGIST</p>
+            </div>
+          </div>
+          <ul class="contact-endpoints-list">
+            <li class="endpoint-item">
+              <div class="endpoint-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="endpoint-meta">
+                <div class="label">Direct WhatsApp</div>
+                <a href="https://wa.me/919354927966" target="_blank" class="value">+91 93549 27966</a>
+              </div>
+            </li>
+            <li class="endpoint-item">
+              <div class="endpoint-icon"><i class="fas fa-phone"></i></div>
+              <div class="endpoint-meta">
+                <div class="label">Personal Line</div>
+                <a href="tel:+919891927966" class="value">+91 98919 27966</a>
+              </div>
+            </li>
+            <li class="endpoint-item">
+              <div class="endpoint-icon"><i class="fas fa-envelope"></i></div>
+              <div class="endpoint-meta">
+                <div class="label">Official Email</div>
+                <a href="mailto:socioninjas@gmail.com" class="value">socioninjas@gmail.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-panel">
+          <form id="agency-contact-form">
+            <input type="hidden" id="client-service" value="Website Development">
+            <div class="form-group-item">
+              <label class="form-input-label" for="client-name">Your Full Name *</label>
+              <input type="text" id="client-name" class="agency-input" placeholder="e.g. Aryan Malhotra" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group-item">
+                <label class="form-input-label" for="client-phone">WhatsApp Number *</label>
+                <input type="tel" id="client-phone" class="agency-input" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="form-group-item">
+                <label class="form-input-label" for="client-budget">Project Scope / Budget</label>
+                <select id="client-budget" class="agency-input">
+                  <option value="₹35,000 – ₹60,000">₹35,000 – ₹60,000 (High-Converting Landing Page)</option>
+                  <option value="₹60,000 – ₹1,20,000" selected>₹60,000 – ₹1,20,000 (Complete Brand Website)</option>
+                  <option value="₹1,20,000 – ₹2,50,000">₹1,20,000 – ₹2,50,000 (Shopify E-Commerce Suite)</option>
+                  <option value="₹2,50,000+">₹2,50,000+ (Custom Web App / Jamstack)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group-item">
+              <label class="form-input-label" for="client-notes">Current Website URL & Desired Features</label>
+              <textarea id="client-notes" class="agency-input" rows="3" placeholder="e.g. yourwebsite.com — We need a modern, high-speed redesign with Next.js/Shopify to improve our sales conversions..."></textarea>
+            </div>
+            <button type="submit" class="btn-magnetic btn-primary-ninja" style="width: 100%;">
+              <span>Request Free Website Teardown</span>
+              <i class="fab fa-whatsapp"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="agency-footer">
+    <div class="container">
+      <div class="footer-cta-banner">
+        <div>
+          <div class="status-pill" style="margin-bottom: 12px;">
+            <span class="status-dot"></span>
+            <span>ELEVATE YOUR DIGITAL PRESENCE</span>
+          </div>
+          <h2 class="footer-cta-title">BUILD A WEBSITE THAT <span class="text-gradient-red">CLOSES DEALS</span>.</h2>
+          <p class="footer-cta-desc">Direct strategy session with founder Aman Vaid.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="https://wa.me/919354927966?text=Hi%20Aman!%20I'm%20ready%20to%20build%20a%20new%20website%20with%20Socio%20Ninjas." target="_blank" class="btn-magnetic btn-primary-ninja" style="width: 100%; text-align: center;">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp Aman Directly</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-identity" style="margin-bottom: 16px;">
+            <img src="logo.jpeg" alt="Socio Ninjas">
+            <span class="brand-text-logo">SOCIO<span>NINJAS</span></span>
+          </a>
+          <p>Stealth precision. Explosive digital growth. Transforming brands into category leaders.</p>
+          <div class="footer-live-status">
+            <span class="footer-live-dot"></span>
+            <span>HQ: NEW DELHI, INDIA • ACTIVE WAR ROOM</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Disciplines</h4>
+          <ul>
+            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+            <li><a href="personal-branding.html">Personal Branding</a></li>
+            <li><a href="ads-management.html">Ads Management</a></li>
+            <li><a href="website-development.html">Website Development</a></li>
+            <li><a href="performance-marketing.html">Performance Marketing</a></li>
+            <li><a href="search-engine-optimization.html">SEO Conquest</a></li>
+            <li><a href="influencer-marketing.html">Influencer Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home Base</a></li>
+            <li><a href="index.html#services">Tactical Arsenal</a></li>
+            <li><a href="index.html#calculator">ROI Simulator</a></li>
+            <li><a href="index.html#methodology">Stealth Roadmap</a></li>
+            <li><a href="index.html#work">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-contact-card">
+            <h5>Aman Vaid</h5>
+            <span class="founder-tag">// FOUNDER & CHIEF STRATEGIST</span>
+            <div class="footer-contact-links">
+              <a href="https://wa.me/919354927966" target="_blank" class="footer-contact-link-item">
+                <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+                <span>+91 93549 27966</span>
+              </a>
+              <a href="tel:+919891927966" class="footer-contact-link-item">
+                <i class="fas fa-phone-volume" style="color: var(--c-cyan);"></i>
+                <span>+91 98919 27966</span>
+              </a>
+              <a href="mailto:socioninjas@gmail.com" class="footer-contact-link-item">
+                <i class="fas fa-envelope" style="color: var(--c-brand);"></i>
+                <span>socioninjas@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-giant-watermark">SOCIO NINJAS</div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 SOCIO NINJAS. ALL RIGHTS RESERVED.</div>
+        <a href="#hero" class="back-to-top-btn"><span>BACK TO TOP</span><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919354927966?text=Hi%20Aman!%20I'm%20interested%20in%20Website%20Development." target="_blank" class="floating-wa-pill">
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat with Aman</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
