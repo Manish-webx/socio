@@ -271,13 +271,14 @@ body.is-viewing .cursor-follower-ring {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 16px 36px;
+  gap: 10px;
+  padding: 13px 28px;
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
   text-decoration: none;
   border-radius: 99px;
   cursor: pointer;
@@ -285,6 +286,21 @@ body.is-viewing .cursor-follower-ring {
   overflow: hidden;
   transition: all 0.35s var(--e-ease);
   border: none;
+}
+
+.btn-magnetic i {
+  font-size: 0.95rem;
+  transition: transform 0.25s ease;
+}
+
+.btn-magnetic i.fa-whatsapp,
+.btn-magnetic .fab.fa-whatsapp,
+.btn-outline-ninja i.fa-whatsapp,
+.btn-outline-ninja .fab.fa-whatsapp {
+  font-size: 1.35rem;
+  color: #25d366;
+  filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.45));
+  flex-shrink: 0;
 }
 
 .btn-primary-ninja {
@@ -313,20 +329,30 @@ body.is-viewing .cursor-follower-ring {
   transform: translateY(-3px);
 }
 
+.btn-outline-ninja:hover i.fa-whatsapp {
+  transform: scale(1.15);
+}
+
 .btn-wa-header {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 9px 18px;
   border-radius: 99px;
   background: rgba(121, 180, 52, 0.12);
   border: 1px solid rgba(121, 180, 52, 0.35);
   color: #8ed638;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s var(--e-ease);
+}
+
+.btn-wa-header i.fa-whatsapp,
+.btn-wa-header .fab.fa-whatsapp {
+  font-size: 1.25rem;
+  color: #25d366;
 }
 
 .btn-wa-header:hover {
@@ -624,6 +650,62 @@ body.is-viewing .cursor-follower-ring {
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+.hero-stage.hero-ads {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(255, 70, 70, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.12) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-ads.jpg');
+}
+
+.hero-stage.hero-smm {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(121, 180, 52, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(254, 44, 85, 0.16) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-smm.jpg');
+}
+
+.hero-stage.hero-influencer {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(193, 53, 132, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(0, 242, 254, 0.14) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-influencer.jpg');
+}
+
+.hero-stage.hero-webdev {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(0, 242, 254, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.14) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-webdev.jpg');
+}
+
+.hero-stage.hero-performance {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(121, 180, 52, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(255, 170, 0, 0.15) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-performance.jpg');
+}
+
+.hero-stage.hero-branding {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(255, 215, 0, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.14) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-branding.jpg');
+}
+
+.hero-stage.hero-seo {
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(0, 242, 254, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.16) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
+    url('hero-seo.jpg');
 }
 
 .hero-stage .container {
@@ -1343,8 +1425,8 @@ body.is-viewing .cursor-follower-ring {
 }
 
 .endpoint-icon {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--c-border);
@@ -1352,7 +1434,13 @@ body.is-viewing .cursor-follower-ring {
   align-items: center;
   justify-content: center;
   color: var(--c-brand);
-  font-size: 1.2rem;
+  font-size: 1.35rem;
+}
+
+.endpoint-icon i.fa-whatsapp,
+.endpoint-icon .fab.fa-whatsapp {
+  font-size: 1.55rem;
+  color: #25d366;
 }
 
 .endpoint-meta .label {
@@ -1647,7 +1735,13 @@ body.is-viewing .cursor-follower-ring {
 }
 
 .footer-contact-link-item i {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.footer-contact-link-item i.fa-whatsapp,
+.footer-contact-link-item .fab.fa-whatsapp {
+  font-size: 1.35rem;
 }
 
 /* Footer Social Icon Bar */
@@ -1757,24 +1851,28 @@ body.is-viewing .cursor-follower-ring {
   gap: 12px;
   background: #25d366;
   color: #050507;
-  padding: 14px 24px;
+  padding: 12px 22px;
   border-radius: 99px;
   text-decoration: none;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.88rem;
-  letter-spacing: 0.5px;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  font-size: 0.82rem;
+  letter-spacing: 0.4px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
   transition: transform 0.3s var(--e-bounce), box-shadow 0.3s ease;
 }
 
 .floating-wa-pill:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.65);
 }
 
 .floating-wa-pill i {
-  font-size: 1.4rem;
+  font-size: 1.85rem;
+  color: #050507;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -2649,10 +2747,19 @@ body.is-viewing .cursor-follower-ring {
   }
 
   .floating-wa-pill {
-    padding: 14px;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     bottom: 20px;
     right: 20px;
+  }
+
+  .floating-wa-pill i {
+    font-size: 2rem;
   }
 
   /* Subpage elements */
