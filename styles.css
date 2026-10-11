@@ -645,7 +645,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(121, 180, 52, 0.2) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(0, 242, 254, 0.08) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.8) 50%, rgba(5, 5, 7, 0.94) 100%),
-    url('hero-bg.jpg');
+    url('assets/images/hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -657,7 +657,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(255, 70, 70, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.12) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-ads.jpg');
+    url('assets/images/hero-ads.jpg');
 }
 
 .hero-stage.hero-smm {
@@ -665,7 +665,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(121, 180, 52, 0.2) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(254, 44, 85, 0.16) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-smm.jpg');
+    url('assets/images/hero-smm.jpg');
 }
 
 .hero-stage.hero-influencer {
@@ -673,7 +673,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(193, 53, 132, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(0, 242, 254, 0.14) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-influencer.jpg');
+    url('assets/images/hero-influencer.jpg');
 }
 
 .hero-stage.hero-webdev {
@@ -681,7 +681,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(0, 242, 254, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.14) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-webdev.jpg');
+    url('assets/images/hero-webdev.jpg');
 }
 
 .hero-stage.hero-performance {
@@ -689,7 +689,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(121, 180, 52, 0.22) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(255, 170, 0, 0.15) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-performance.jpg');
+    url('assets/images/hero-performance.jpg');
 }
 
 .hero-stage.hero-branding {
@@ -697,7 +697,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(255, 215, 0, 0.16) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.14) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-branding.jpg');
+    url('assets/images/hero-branding.jpg');
 }
 
 .hero-stage.hero-seo {
@@ -705,7 +705,7 @@ body.is-viewing .cursor-follower-ring {
     radial-gradient(ellipse at 80% 25%, rgba(0, 242, 254, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 80%, rgba(121, 180, 52, 0.16) 0%, transparent 45%),
     linear-gradient(180deg, rgba(5, 5, 7, 0.72) 0%, rgba(5, 5, 7, 0.82) 50%, rgba(5, 5, 7, 0.95) 100%),
-    url('hero-seo.jpg');
+    url('assets/images/hero-seo.jpg');
 }
 
 .hero-stage .container {
