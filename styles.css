@@ -224,6 +224,9 @@ body.is-viewing .cursor-follower-ring {
 .status-pill {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: max-content;
   gap: 10px;
   padding: 6px 16px;
   background: rgba(121, 180, 52, 0.08);
@@ -236,6 +239,17 @@ body.is-viewing .cursor-follower-ring {
   letter-spacing: 1.5px;
   color: #8ed638;
   margin-bottom: 24px;
+}
+
+.status-pill[style*="margin: 0 auto"],
+.status-pill[style*="margin:0 auto"] {
+  align-self: center;
+}
+
+.hero-stage .status-pill {
+  align-self: flex-start;
+  width: fit-content;
+  max-width: max-content;
 }
 
 .status-dot {
@@ -2531,6 +2545,9 @@ body.is-viewing .cursor-follower-ring {
     letter-spacing: 1px;
     margin-bottom: 14px;
     line-height: 1.4;
+    width: fit-content;
+    max-width: 100%;
+    align-self: flex-start;
   }
 
   .hero-subtext-grid {
