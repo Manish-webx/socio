@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initWsocialCursor();
   initNavbarScroll();
+  initHeroVideo();
   initServiceDrawers();
   initRoiCalculator();
   initContactForm();
@@ -283,6 +284,101 @@ function initFaqAccordions() {
         item.classList.add('is-open');
       }
     });
+  });
+}
+
+/* ==========================================================================
+   8. HERO VIDEO PLAYER CONTROLS
+   ========================================================================== */
+function initHeroVideo() {
+  const video = document.getElementById('hero-video');
+  const soundBtn = document.getElementById('hero-video-sound');
+  const playBtn = document.getElementById('hero-video-play');
+  const fullscreenBtn = document.getElementById('hero-video-fullscreen');
+
+  if (!video) return;
+
+  // Attempt autoplay
+  video.play().catch(() => {
+    // Browsers block unmuted autoplay; muted attribute is set
+  });
+
+  if (soundBtn) {
+    soundBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      video.muted = !video.muted;
+      const icon = soundBtn.querySelector('i');
+      const text = soundBtn.querySelector('.ctrl-label');
+      if (video.muted) {
+        if (icon) icon.className = 'fas fa-volume-mute';
+        if (text) text.textContent = 'Unmute';
+      } else {
+        if (icon) icon.className = 'fas fa-volume-high';
+        if (text) text.textContent = 'Mute';
+      }
+    });
+  }
+
+  if (playBtn) {
+    playBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (video.paused) {
+        video.play();
+        const icon = playBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-pause';
+      } else {
+        video.pause();
+        const icon = playBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-play';
+      }
+    });
+  }
+
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!document.fullscreenElement) {
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+  }
+
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      if (playBtn) {
+        const icon = playBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-pause';
+      }
+    } else {
+      video.pause();
+      if (playBtn) {
+        const icon = playBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-play';
+      }
+    }
+  });
+
+  video.addEventListener('play', () => {
+    if (playBtn) {
+      const icon = playBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-pause';
+    }
+  });
+
+  video.addEventListener('pause', () => {
+    if (playBtn) {
+      const icon = playBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-play';
+    }
   });
 }
 

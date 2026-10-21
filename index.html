@@ -138,56 +138,33 @@
     </div>
   </header>
 
-  <!-- Hero Section (Editorial High Impact — Full-Service Digital Marketing Agency) -->
-  <section class="hero-stage" id="hero">
-    <div class="hero-backdrop-glow"></div>
-    <div class="hero-backdrop-glow-cyan"></div>
+  <!-- Hero Section: Pure Cinematic Video Presentation -->
+  <section class="hero-video-section" id="hero">
+    <h1 class="sr-only">SOCIO NINJAS — 360° Digital Marketing &amp; Growth Agency</h1>
 
-    <div class="container">
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        <span>FULL-SERVICE DIGITAL MARKETING &amp; GROWTH AGENCY</span>
-      </div>
+    <!-- Ambient Backdrop Brand Glows -->
+    <div class="hero-video-glow hero-video-glow-green"></div>
+    <div class="hero-video-glow hero-video-glow-cyan"></div>
 
-      <h1 class="hero-headline">
-        WE SCALE BRANDS WITH <span class="text-gradient-red">CREATIVE PRECISION</span> &amp; DATA.
-      </h1>
+    <div class="hero-video-container">
+      <div class="hero-video-frame">
+        <video id="hero-video" class="hero-video-player" autoplay loop muted playsinline poster="assets/images/hero-bg.jpg" preload="auto">
+          <source src="assets/video/hero.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
 
-      <div class="hero-subtext-grid">
-        <div>
-          <p class="hero-lead-para">
-            No vanity fluff. No generic templates. <strong>Socio Ninjas</strong> is an elite full-service digital marketing agency engineering viral social media campaigns, high-converting bespoke websites, SEO dominance, influencer storytelling, executive personal brands, and high-ROAS performance systems.
-          </p>
-        </div>
-
-        <div class="hero-actions-row">
-          <a href="#contact" class="btn-magnetic btn-primary-ninja">
-            <span>Request Digital Marketing Audit</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="#services" class="btn-magnetic btn-outline-ninja">
-            <span>Explore Arsenal</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Live Agency Metrics -->
-      <div class="hero-ticker-metrics">
-        <div class="metric-node">
-          <div class="metric-node-val">150M+</div>
-          <div class="metric-node-label">Digital Impressions &amp; Reach</div>
-        </div>
-        <div class="metric-node">
-          <div class="metric-node-val">350%+</div>
-          <div class="metric-node-label">Average Engagement Lift</div>
-        </div>
-        <div class="metric-node">
-          <div class="metric-node-val">120+</div>
-          <div class="metric-node-label">Brands &amp; Leaders Scaled</div>
-        </div>
-        <div class="metric-node">
-          <div class="metric-node-val">99.2%</div>
-          <div class="metric-node-label">Client Retention Rate</div>
+        <!-- Floating Glassmorphic Video Controls -->
+        <div class="hero-video-controls">
+          <button type="button" id="hero-video-sound" class="hero-ctrl-btn" aria-label="Toggle Sound" title="Toggle Sound">
+            <i class="fas fa-volume-mute"></i>
+            <span class="ctrl-label">Unmute</span>
+          </button>
+          <button type="button" id="hero-video-play" class="hero-ctrl-btn" aria-label="Play or Pause" title="Play / Pause">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button type="button" id="hero-video-fullscreen" class="hero-ctrl-btn" aria-label="Fullscreen" title="Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
         </div>
       </div>
     </div>
