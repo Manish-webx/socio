@@ -50,7 +50,7 @@ function initWsocialCursor() {
   renderFollower();
 
   // Hover states on links, buttons, inputs
-  const hoverables = document.querySelectorAll('a, button, input, select, textarea, .service-row-item, .niche-chip-btn, .client-brand-chip');
+  const hoverables = document.querySelectorAll('a, button, input, select, textarea, .service-row-item, .niche-chip-btn, .client-brand-chip, .testimonial-card');
   hoverables.forEach((el) => {
     el.addEventListener('mouseenter', () => {
       document.body.classList.add('is-hovering');
@@ -203,14 +203,14 @@ function initContactForm() {
     const notes = document.getElementById('client-notes')?.value || '';
 
     const payload = encodeURIComponent(
-      `*New Project Brief — Socio Ninjas*\n\n` +
+      `*New Website Inquiry — Socio Ninjas*\n\n` +
       `*Name:* ${name}\n` +
       `*Phone:* ${phone}\n` +
       `*Email:* ${email}\n` +
       `*Service Required:* ${service}\n` +
       `*Monthly Budget:* ${budget}\n` +
-      `*Brief / Goals:* ${notes}\n\n` +
-      `Sent via Socio Ninjas Portal`
+      `*Project Details / Goals:* ${notes}\n\n` +
+      `Sent from socioninjas.com`
     );
 
     window.open(`https://wa.me/919354927966?text=${payload}`, '_blank');
