@@ -3342,7 +3342,7 @@ body.is-viewing .cursor-follower-ring {
    ========================================================================== */
 .testimonials-section {
   position: relative;
-  background: radial-gradient(circle at 50% 0%, rgba(121, 180, 52, 0.05) 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 0%, rgba(121, 180, 52, 0.05) 0%, transparent 60%);
   padding: 50px 0 20px;
 }
 
@@ -3351,7 +3351,7 @@ body.is-viewing .cursor-follower-ring {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 740px;
-  margin: 32px auto 0;
+  margin: 32px 0 0 0;
 }
 
 .testimonial-card {
@@ -3384,6 +3384,7 @@ body.is-viewing .cursor-follower-ring {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     max-width: 100%;
+    margin: 24px 0 0 0;
   }
 
   .testimonial-card {
@@ -3398,6 +3399,7 @@ body.is-viewing .cursor-follower-ring {
     scroll-snap-type: x mandatory;
     gap: 14px;
     padding: 10px 4px 16px;
+    margin: 20px 0 0 0;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -3412,6 +3414,6 @@ body.is-viewing .cursor-follower-ring {
 
   .testimonial-card {
     flex: 0 0 220px;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
   }
 }
