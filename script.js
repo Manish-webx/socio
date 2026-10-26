@@ -186,14 +186,22 @@ function initRoiCalculator() {
 }
 
 /* ==========================================================================
-   5. CONTACT FORM TO WHATSAPP DISPATCH
+   5. CONTACT FORM TO PHPMAILER & WHATSAPP DISPATCH
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('agency-contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending Message...</span> <i class="fas fa-spinner fa-spin"></i>';
+    }
 
     const name = document.getElementById('client-name')?.value || 'Client';
     const phone = document.getElementById('client-phone')?.value || '';
@@ -213,7 +221,28 @@ function initContactForm() {
       `Sent from socioninjas.com`
     );
 
+    // Prepare form data for mail1.php
+    const formData = new FormData(form);
+    formData.append('ajax', '1');
+    formData.append('url', window.location.href);
+
+    try {
+      await fetch('mail1.php', {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: formData
+      });
+    } catch (err) {
+      console.warn('Mail dispatch network notice:', err);
+    }
+
+    // Open WhatsApp in a new tab
     window.open(`https://wa.me/919354927966?text=${payload}`, '_blank');
+
+    // Redirect to thank-you confirmation page
+    window.location.href = 'thank-you.html';
   });
 }
 

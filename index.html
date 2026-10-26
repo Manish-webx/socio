@@ -189,6 +189,17 @@
           alt="Mother & Child Care Clinic Logo"></div>
       <div class="client-brand-chip"><img src="assets/images/client/WhatsApp Image 2026-10-04 at 2.14.25 PM.jpeg"
           alt="Mamta Child Health Care Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Dr-Babita-Ramani-Obstetrics-Logo.webp"
+          alt="Dr. Babita Ramani Obstetrics &amp; Gynecology Clinic Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Modern-Lung-Specialist-Logo.webp"
+          alt="Modern Lung Specialist Clinic Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Elegant-Maternal-Care-Clinic-Logo.webp"
+          alt="Elegant Maternal Care Clinic Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Fusion-X-Wolf-Emblem.webp"
+          alt="Fusion-X Brand Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Bold-Red-and-Orange-Emblem-Badge.webp"
+          alt="Client Brand Emblem Badge"></div>
+
       <!-- Duplicated for seamless loop -->
       <div class="client-brand-chip"><img src="assets/images/client/WhatsApp Image 2026-10-04 at 2.14.23 PM.jpeg"
           alt="City Hospital Logo"></div>
@@ -202,6 +213,16 @@
           alt="Mother & Child Care Clinic Logo"></div>
       <div class="client-brand-chip"><img src="assets/images/client/WhatsApp Image 2026-10-04 at 2.14.25 PM.jpeg"
           alt="Mamta Child Health Care Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Dr-Babita-Ramani-Obstetrics-Logo.webp"
+          alt="Dr. Babita Ramani Obstetrics &amp; Gynecology Clinic Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Modern-Lung-Specialist-Logo.webp"
+          alt="Modern Lung Specialist Clinic Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Elegant-Maternal-Care-Clinic-Logo.webp"
+          alt="Elegant Maternal Care Clinic Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Fusion-X-Wolf-Emblem.webp"
+          alt="Fusion-X Brand Logo"></div>
+      <div class="client-brand-chip"><img src="assets/images/client/Bold-Red-and-Orange-Emblem-Badge.webp"
+          alt="Client Brand Emblem Badge"></div>
     </div>
   </section>
 
@@ -895,27 +916,27 @@
 
         <!-- Direct Inquiry Form -->
         <div class="contact-form-panel">
-          <form id="agency-contact-form">
+          <form id="agency-contact-form" action="mail1.php" method="POST">
             <div class="form-group-item">
               <label class="form-input-label" for="client-name">Your Full Name *</label>
-              <input type="text" id="client-name" class="agency-input" placeholder="e.g. Vikram Malhotra" required>
+              <input type="text" id="client-name" name="name" class="agency-input" placeholder="e.g. Vikram Malhotra" required>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-phone">WhatsApp Number *</label>
-                <input type="tel" id="client-phone" class="agency-input" placeholder="+91 98765 43210" required>
+                <input type="tel" id="client-phone" name="phone" class="agency-input" placeholder="+91 98765 43210" required>
               </div>
               <div class="form-group-item">
                 <label class="form-input-label" for="client-email">Email Address *</label>
-                <input type="email" id="client-email" class="agency-input" placeholder="name@company.com" required>
+                <input type="email" id="client-email" name="email" class="agency-input" placeholder="name@company.com" required>
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-service">Primary Focus</label>
-                <select id="client-service" class="agency-input" required>
+                <select id="client-service" name="service" class="agency-input" required>
                   <option value="Social Media Marketing">Social Media Marketing</option>
                   <option value="Personal Branding">Personal Branding</option>
                   <option value="Ads Management (Meta & Google)">Ads Management (Meta & Google)</option>
@@ -928,7 +949,7 @@
               </div>
               <div class="form-group-item">
                 <label class="form-input-label" for="client-budget">Planned Monthly Budget</label>
-                <select id="client-budget" class="agency-input">
+                <select id="client-budget" name="budget" class="agency-input">
                   <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
                   <option value="₹50,000 – ₹1,00,000" selected>₹50,000 – ₹1,00,000</option>
                   <option value="₹1,00,000 – ₹2,50,000">₹1,00,000 – ₹2,50,000</option>
@@ -939,7 +960,7 @@
 
             <div class="form-group-item">
               <label class="form-input-label" for="client-notes">Tell us about your business &amp; goals</label>
-              <textarea id="client-notes" class="agency-input" rows="3"
+              <textarea id="client-notes" name="notes" class="agency-input" rows="3"
                 placeholder="Tell us about your business, what you offer, and what results you want..."></textarea>
             </div>
 

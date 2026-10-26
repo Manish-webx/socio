@@ -655,20 +655,20 @@
         </div>
 
         <div class="contact-form-panel">
-          <form id="agency-contact-form">
-            <input type="hidden" id="client-service" value="Website Development">
+          <form id="agency-contact-form" action="mail1.php" method="POST">
+            <input type="hidden" id="client-service" name="service" value="Website Development">
             <div class="form-group-item">
               <label class="form-input-label" for="client-name">Your Full Name *</label>
-              <input type="text" id="client-name" class="agency-input" placeholder="e.g. Aryan Malhotra" required>
+              <input type="text" id="client-name" name="name" class="agency-input" placeholder="e.g. Aryan Malhotra" required>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-phone">WhatsApp Number *</label>
-                <input type="tel" id="client-phone" class="agency-input" placeholder="+91 98765 43210" required>
+                <input type="tel" id="client-phone" name="phone" class="agency-input" placeholder="+91 98765 43210" required>
               </div>
               <div class="form-group-item">
                 <label class="form-input-label" for="client-budget">Project Scope / Budget</label>
-                <select id="client-budget" class="agency-input">
+                <select id="client-budget" name="budget" class="agency-input">
                   <option value="₹35,000 – ₹60,000">₹35,000 – ₹60,000 (High-Converting Landing Page)</option>
                   <option value="₹60,000 – ₹1,20,000" selected>₹60,000 – ₹1,20,000 (Complete Business Website)</option>
                   <option value="₹1,20,000 – ₹2,50,000">₹1,20,000 – ₹2,50,000 (Shopify E-Commerce Store)</option>
@@ -678,7 +678,7 @@
             </div>
             <div class="form-group-item">
               <label class="form-input-label" for="client-notes">Current Website or Idea &amp; Requirements</label>
-              <textarea id="client-notes" class="agency-input" rows="3" placeholder="Tell us about your business, current website link, and what features you need..."></textarea>
+              <textarea id="client-notes" name="notes" class="agency-input" rows="3" placeholder="Tell us about your business, current website link, and what features you need..."></textarea>
             </div>
             <button type="submit" class="btn-magnetic btn-primary-ninja" style="width: 100%;">
               <span>Get Free Website Review</span>

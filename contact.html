@@ -242,28 +242,28 @@
 
         <!-- Project Form -->
         <div class="contact-form-panel">
-          <form id="agency-contact-form">
+          <form id="agency-contact-form" action="mail1.php" method="POST">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-name">Your Full Name *</label>
-                <input type="text" id="client-name" class="agency-input" placeholder="e.g. Vikram Sharma" required>
+                <input type="text" id="client-name" name="name" class="agency-input" placeholder="e.g. Vikram Sharma" required>
               </div>
 
               <div class="form-group-item">
                 <label class="form-input-label" for="client-phone">WhatsApp Number *</label>
-                <input type="tel" id="client-phone" class="agency-input" placeholder="+91 98765 43210" required>
+                <input type="tel" id="client-phone" name="phone" class="agency-input" placeholder="+91 98765 43210" required>
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-email">Email Address *</label>
-                <input type="email" id="client-email" class="agency-input" placeholder="name@company.com" required>
+                <input type="email" id="client-email" name="email" class="agency-input" placeholder="name@company.com" required>
               </div>
 
               <div class="form-group-item">
                 <label class="form-input-label" for="client-service">Service You Need *</label>
-                <select id="client-service" class="agency-input">
+                <select id="client-service" name="service" class="agency-input">
                   <option value="Ads Management (Meta & Google)" selected>Meta &amp; Google Ads</option>
                   <option value="Social Media Marketing">Social Media Marketing</option>
                   <option value="Personal Branding">Personal Branding</option>
@@ -278,7 +278,7 @@
 
             <div class="form-group-item">
               <label class="form-input-label" for="client-budget">Estimated Monthly Budget</label>
-              <select id="client-budget" class="agency-input">
+              <select id="client-budget" name="budget" class="agency-input">
                 <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000 / month</option>
                 <option value="₹50,000 – ₹1,00,000" selected>₹50,000 – ₹1,00,000 / month</option>
                 <option value="₹1,00,000 – ₹2,50,000">₹1,00,000 – ₹2,50,000 / month</option>
@@ -288,7 +288,7 @@
 
             <div class="form-group-item">
               <label class="form-input-label" for="client-notes">Website / Instagram Link &amp; Goals *</label>
-              <textarea id="client-notes" class="agency-input" rows="4" placeholder="Tell us about your business, website or Instagram link, and what results you want..." required></textarea>
+              <textarea id="client-notes" name="notes" class="agency-input" rows="4" placeholder="Tell us about your business, website or Instagram link, and what results you want..." required></textarea>
             </div>
 
             <button type="submit" class="btn-magnetic btn-primary-ninja" style="width: 100%;">

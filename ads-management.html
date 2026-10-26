@@ -812,20 +812,20 @@
         </div>
 
         <div class="contact-form-panel">
-          <form id="agency-contact-form">
-            <input type="hidden" id="client-service" value="Ads Management">
+          <form id="agency-contact-form" action="mail1.php" method="POST">
+            <input type="hidden" id="client-service" name="service" value="Ads Management">
             <div class="form-group-item">
               <label class="form-input-label" for="client-name">Your Full Name *</label>
-              <input type="text" id="client-name" class="agency-input" placeholder="e.g. Rahul Sharma" required>
+              <input type="text" id="client-name" name="name" class="agency-input" placeholder="e.g. Rahul Sharma" required>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-phone">WhatsApp Number *</label>
-                <input type="tel" id="client-phone" class="agency-input" placeholder="+91 98765 43210" required>
+                <input type="tel" id="client-phone" name="phone" class="agency-input" placeholder="+91 98765 43210" required>
               </div>
               <div class="form-group-item">
                 <label class="form-input-label" for="client-budget">Planned Monthly Ad Spend</label>
-                <select id="client-budget" class="agency-input">
+                <select id="client-budget" name="budget" class="agency-input">
                   <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
                   <option value="₹50,000 – ₹1,00,000" selected>₹50,000 – ₹1,00,000</option>
                   <option value="₹1,00,000 – ₹2,50,000">₹1,00,000 – ₹2,50,000</option>
@@ -835,7 +835,7 @@
             </div>
             <div class="form-group-item">
               <label class="form-input-label" for="client-notes">Website / Product Link &amp; Goals</label>
-              <textarea id="client-notes" class="agency-input" rows="3"
+              <textarea id="client-notes" name="notes" class="agency-input" rows="3"
                 placeholder="Tell us about your business, website link, and what results you want..."></textarea>
             </div>
             <button type="submit" class="btn-magnetic btn-primary-ninja" style="width: 100%;">
