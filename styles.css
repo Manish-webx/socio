@@ -3869,3 +3869,116 @@ body.is-viewing .cursor-follower-ring {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================================================
+   RESULTS PAGE — GALLERY + LIGHTBOX
+   ========================================================================== */
+.hero-stage.hero-results {
+  height: auto;
+  min-height: 70vh;
+  justify-content: center;
+  gap: 32px;
+  padding-bottom: clamp(40px, 6vh, 70px);
+  background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(121, 180, 52, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(0, 242, 254, 0.1) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.78) 0%, rgba(5, 5, 7, 0.86) 50%, rgba(5, 5, 7, 0.96) 100%),
+    url('assets/images/hero-performance.jpg');
+}
+
+.results-gallery {
+  columns: 4 240px;
+  column-gap: 18px;
+}
+
+.results-item {
+  display: block;
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 0;
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--c-surface-card);
+  cursor: zoom-in;
+  break-inside: avoid;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.results-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.results-item:hover,
+.results-item:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--c-brand);
+  box-shadow: 0 12px 32px rgba(121, 180, 52, 0.18);
+  outline: none;
+}
+
+.results-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 16px;
+  background: rgba(5, 5, 7, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.results-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: min(100%, 900px);
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.lightbox-btn {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+  background: var(--c-surface-card);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-btn:hover { background: var(--c-brand); }
+.lightbox-close { top: 16px; right: 16px; }
+.lightbox-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 16px; top: 50%; transform: translateY(-50%); }
+
+.lightbox-count {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--c-text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+body.lightbox-open { overflow: hidden; }
+
+@media (max-width: 600px) {
+  .results-gallery { columns: 2; column-gap: 10px; }
+  .results-item { margin-bottom: 10px; border-radius: 10px; }
+  .lightbox-prev, .lightbox-next { top: auto; bottom: 10px; transform: none; }
+}
