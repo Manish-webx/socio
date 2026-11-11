@@ -244,6 +244,11 @@
         <!-- Project Form -->
         <div class="contact-form-panel">
           <form id="agency-contact-form" action="mail1.php" method="POST">
+            <!-- Spam honeypot: hidden from humans, bots fill it -->
+            <div aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+              <label for="company_website">Leave this field empty</label>
+              <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" value="">
+            </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div class="form-group-item">
                 <label class="form-input-label" for="client-name">Your Full Name *</label>

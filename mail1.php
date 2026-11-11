@@ -36,6 +36,94 @@ if (empty($name) && empty($phone)) {
     exit();
 }
 
+/* ==========================================================================
+   SPAM PROTECTION
+   Spam is silently dropped with a fake "success" so bots don't adapt.
+   ========================================================================== */
+function sn_spam_exit($reason, $isAjax) {
+    $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'unknown';
+    @file_put_contents(sys_get_temp_dir() . '/socioninjas_spam.log',
+        date('Y-m-d H:i:s') . " | $ip | $reason\n", FILE_APPEND | LOCK_EX);
+    if ($isAjax) {
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(['status' => 'success', 'message' => 'Your inquiry has been successfully sent!', 'redirect' => 'thank-you.html']);
+        exit();
+    }
+    header("Location: thank-you.html");
+    exit();
+}
+
+// 1. Only POST requests
+if (!isset($_SERVER['REQUEST_METHOD']) || $_SERVER['REQUEST_METHOD'] !== 'POST') {
+    sn_spam_exit('not POST', $isAjax);
+}
+
+// 2. Honeypot: hidden field that humans never see or fill
+if (!empty($_POST['company_website'])) {
+    sn_spam_exit('honeypot filled', $isAjax);
+}
+
+// 3. JavaScript token: set by script.js; plain bots posting directly won't have it
+$year = (int) date('Y');
+$validTokens = ['sn-human-' . ($year - 1), 'sn-human-' . $year, 'sn-human-' . ($year + 1)];
+if (!isset($_POST['sn_token']) || !in_array($_POST['sn_token'], $validTokens, true)) {
+    sn_spam_exit('missing JS token', $isAjax);
+}
+
+// 4. Time trap: humans need at least 4 seconds to fill the form
+$fillTime = isset($_POST['sn_fill_ms']) ? (int) $_POST['sn_fill_ms'] : 0;
+if ($fillTime < 4000) {
+    sn_spam_exit("too fast ({$fillTime}ms)", $isAjax);
+}
+
+// 5. Field validation
+$phoneDigits = preg_replace('/\D/', '', $phone);
+if (strlen($phoneDigits) < 10 || strlen($phoneDigits) > 13) {
+    sn_spam_exit('invalid phone', $isAjax);
+}
+if (mb_strlen($name) < 2 || mb_strlen($name) > 60 || preg_match('/https?:|www\.|[<>{}\[\]@\/\\\\]|\d{3,}/i', $name)) {
+    sn_spam_exit('invalid name', $isAjax);
+}
+if (mb_strlen($notes) > 1500) {
+    sn_spam_exit('notes too long', $isAjax);
+}
+
+// 6. Content filters: too many links, foreign scripts, spam keywords
+$allText = $name . ' ' . $notes . ' ' . $email;
+if (preg_match_all('/https?:\/\/|www\./i', $allText) > 2) {
+    sn_spam_exit('too many links', $isAjax);
+}
+if (preg_match('/[\x{0400}-\x{04FF}\x{4E00}-\x{9FFF}\x{3040}-\x{30FF}\x{AC00}-\x{D7AF}]/u', $allText)) {
+    sn_spam_exit('foreign script', $isAjax);
+}
+$spamWords = [
+    'viagra', 'cialis', 'casino', 'crypto', 'bitcoin', 'forex', 'loan offer', 'porn', 'escort service', 'backlink', 'guest post', 'seo service', 'rank your website', 'first page of google',
+    'web traffic', 'increase traffic', 'buy followers', 'unsubscribe', 'click here', 'investment opportunity',
+    'make money', 'earn money', 'work from home', 'gambling', 'betting', 'lottery', 'telegram', 'bit.ly',
+];
+$lowerText = mb_strtolower($allText);
+foreach ($spamWords as $word) {
+    if (strpos($lowerText, $word) !== false) {
+        sn_spam_exit("keyword: $word", $isAjax);
+    }
+}
+
+// 7. Rate limit: max 3 submissions per IP per 15 minutes
+$ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'unknown';
+$rateFile = sys_get_temp_dir() . '/socioninjas_rate_' . md5($ip) . '.json';
+$now = time();
+$hits = [];
+if (is_file($rateFile)) {
+    $hits = json_decode((string) @file_get_contents($rateFile), true);
+    if (!is_array($hits)) $hits = [];
+}
+$hits = array_values(array_filter($hits, function ($t) use ($now) { return $t > $now - 900; }));
+if (count($hits) >= 3) {
+    sn_spam_exit('rate limited', $isAjax);
+}
+$hits[] = $now;
+@file_put_contents($rateFile, json_encode($hits), LOCK_EX);
+
 $mail = new PHPMailer(true);
 
 try {

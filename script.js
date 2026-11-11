@@ -192,8 +192,20 @@ function initContactForm() {
   const form = document.getElementById('agency-contact-form');
   if (!form) return;
 
+  const formLoadedAt = Date.now();
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // Basic phone check before sending (server re-checks everything)
+    const phoneField = document.getElementById('client-phone');
+    const phoneDigits = (phoneField?.value || '').replace(/\D/g, '');
+    if (phoneField && (phoneDigits.length < 10 || phoneDigits.length > 13)) {
+      phoneField.setCustomValidity('Please enter a valid 10-digit phone number.');
+      phoneField.reportValidity();
+      phoneField.addEventListener('input', () => phoneField.setCustomValidity(''), { once: true });
+      return;
+    }
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
@@ -225,6 +237,9 @@ function initContactForm() {
     const formData = new FormData(form);
     formData.append('ajax', '1');
     formData.append('url', window.location.href);
+    // Spam protection signals (checked in mail1.php)
+    formData.append('sn_token', 'sn-human-' + new Date().getFullYear());
+    formData.append('sn_fill_ms', String(Date.now() - formLoadedAt));
 
     try {
       await fetch('mail1.php', {
